@@ -25,12 +25,7 @@ __attribute__((naked, noreturn)) void Reset_Handler()
 {
 
     // set initial stack pointer
-    //
-    // note::
-    // since the stack point is already included in the vector_table (in the first entry),
-    // this statement is not necessary.
-    //
-    // asm("ldr sp, = _estack");
+    asm("ldr sp, = _estack");
 
     // memset .bss to zero, and copy .data section to RAM region
     extern long _sbss, _ebss, _sdata, _edata, _sidata;

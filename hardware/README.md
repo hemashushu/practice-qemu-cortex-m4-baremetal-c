@@ -1,9 +1,8 @@
-## STM32F405RG
+## Chip STM32F405RG
 
-Homepage
 https://www.st.com/en/microcontrollers-microprocessors/stm32f405rg.html
 
-Product Specifications (datasheet)
+Product Specifications
 https://www.st.com/resource/en/datasheet/stm32f405rg.pdf
 
 Reference Manuals
