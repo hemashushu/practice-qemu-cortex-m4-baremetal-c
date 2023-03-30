@@ -152,7 +152,7 @@ SECTIONS
     /* the next 15 entries are exception vectors */
     /* keyword `KEEP` means that it is kept even if no other item refers to it. */
     KEEP(*(.vector_table.exceptions));
-  } >FLASH
+  } > FLASH
 
   /* The 'text' section contains the main program code. */
   .text : ALIGN(4)
@@ -172,14 +172,14 @@ SECTIONS
    * things like variables, which can change.
    *
    * set the Load Memory Address (LMA) of the `.data` section by
-   * `AT(...)` at header line or `AT > FLASH` at footer line
+   * `AT(...)` at header line or `AT> FLASH` at footer line
    */
   .data : ALIGN(4) /* AT(ADDR(.rodata) + SIZEOF(.rodata)) */
   {
     _sdata = .;
     *(.data .data.*);
     _edata = .;
-  } >RAM AT >FLASH
+  } > RAM AT> FLASH
 
   /**
    * get the LMA of the section `.data`
@@ -201,7 +201,7 @@ SECTIONS
     _sbss = .;
     *(.bss .bss.*);
     _ebss = .;
-  } >RAM
+  } > RAM
 
   . = ALIGN(4);
   _heap_start = .;

@@ -1,6 +1,6 @@
 # QEMU Cortex-M4 bare-metal C
 
-QEMU _netduinoplus2_:
+QEMU machine _netduinoplus2_:
 
 - STMicroelectronics STM32F405RG, 168 MHz ARM Cortex-M4 core
 - 1024 KB Flash
@@ -80,6 +80,8 @@ Breakpoint 1, main () at main.c:158
 (gdb) n
 161         char text_prefix[] = "Ticks: ";
 ```
+
+Enter `q` to exit GDB.
 
 ## Debug in the VSCode
 
@@ -204,4 +206,4 @@ Breakpoint 1, main () at main.c:158
 161         char text_prefix[] = "Ticks: ";
 ```
 
-Enter command `q` to exit GDB.
+Enter `q` to exit GDB.
